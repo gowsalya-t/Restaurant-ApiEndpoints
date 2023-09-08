@@ -3,10 +3,12 @@ const mongo = require("mongodb");
 const MongoClient = mongo.MongoClient;
 const app = express();
 var cors = require("cors");
+require('dotenv').config();
 const PORT = 5000;
 app.use(express.json());
 app.use(cors());
-const MONGO_URL = "mongodb://127.0.0.1:27017";
+const MONGO_URL = process.env.MONGO_URL;
+ "mongodb://127.0.0.1:27017";
 // "mongodb://127.0.0.1:27017";
 // "mongodb://localhost:27017";
 
